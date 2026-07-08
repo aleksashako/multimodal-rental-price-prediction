@@ -11,7 +11,7 @@ Predicting monthly apartment rental prices in Istanbul using a **late-fusion mul
 | Model | MAE ↓ | RMSE ↓ | MAPE ↓ | R² ↑ |
 |-------|------:|-------:|-------:|-----:|
 | M1: Tabular MLP (baseline) | 7,247 TL | 9,340 TL | 24.01% | 0.3726 |
-| **M2: Late Fusion - EfficientNetB0 ★** | **6,626 TL** | **8,654 TL** | **21.42%** | **0.4614** |
+| **M2: Late Fusion - EfficientNetB0** | **6,626 TL** | **8,654 TL** | **21.42%** | **0.4614** |
 
 **Multimodal model vs. tabular baseline: −8.6% MAE · −10.8% MAPE · +0.089 R²**
 
@@ -60,7 +60,7 @@ Fusion Head:
 |--------|----------|:---------:|------:|-------:|-----:|
 | A | MobileNetV2 | ✓ | 6,903 TL | 22.64% | 0.4190 |
 | B | EfficientNetB0 | ✗ | 7,485 TL | 22.76% | 0.2968 |
-| **C ★** | **EfficientNetB0** | **✓** | **6,626 TL** | **21.42%** | **0.4614** |
+| **C** | **EfficientNetB0** | **✓** | **6,626 TL** | **21.42%** | **0.4614** |
 
 > Config B (no fine-tuning) underperforms the tabular-only baseline on R² → Phase 2 is critical.
 
@@ -69,7 +69,7 @@ Fusion Head:
 | Dropout | MAE ↓ | MAPE ↓ | R² ↑ |
 |--------:|------:|-------:|-----:|
 | 0.2 | 7,418 TL | 24.72% | 0.3499 |
-| **0.3 ★** | **7,247 TL** | **24.01%** | **0.3726** |
+| **0.3** | **7,247 TL** | **24.01%** | **0.3726** |
 | 0.4 | 7,333 TL | 24.20% | 0.3604 |
 
 All configurations within <2.4% MAE - model is robust to dropout in the [0.2, 0.4] range. Config 0.3 selected as default.
